@@ -8,7 +8,8 @@ var nodemon = require('gulp-nodemon');
 gulp.task('server', function () {
     nodemon({
         script: 'bin/www',
-        ext: 'js html',
+        ext: 'js',
+        // watch:'./routes/*.*',
         ignore: ["gulpfile.js", "node_modules/", "public/**/*.*"],
         env: {'NODE_ENV': 'development'}
     }).on('start', function () {
